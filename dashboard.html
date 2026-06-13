@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Dashboard - PrimePay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-wrapper dashboard-wrapper">
+
+    <div class="logo-section">
+      <div class="logo-icon">₹</div>
+      <div class="logo-title">PrimePay</div>
+      <div class="logo-subtitle">Transaction Dashboard</div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card total">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Total Transactions</div>
+      </div>
+      <div class="stat-card success">
+        <div class="stat-value" id="statSuccess">0</div>
+        <div class="stat-label">Successful</div>
+      </div>
+      <div class="stat-card pending">
+        <div class="stat-value" id="statPending">0</div>
+        <div class="stat-label">Pending</div>
+      </div>
+      <div class="stat-card failed">
+        <div class="stat-value" id="statFailed">0</div>
+        <div class="stat-label">Failed</div>
+      </div>
+    </div>
+
+    <!-- Search & Export -->
+    <div class="glass-card">
+      <div class="search-bar">
+        <input type="text" class="search-input" id="searchOrderId" placeholder="Search by Order ID" />
+        <input type="text" class="search-input" id="searchUtr" placeholder="Search by UTR" />
+        <select class="search-input" id="filterStatus" style="flex: 0 0 140px;">
+          <option value="">All Status</option>
+          <option value="SUCCESS">Success</option>
+          <option value="PENDING">Pending</option>
+          <option value="FAILURE">Failure</option>
+        </select>
+        <button class="btn btn-secondary" id="searchBtn" style="flex: 0 0 auto; width: auto; padding: 12px 20px;">Search</button>
+        <button class="btn btn-primary" id="exportBtn" style="flex: 0 0 auto; width: auto; padding: 12px 20px;">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Export CSV
+        </button>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="glass-card">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>UTR</th>
+              <th>Mobile</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody id="transactionsBody">
+            <tr><td colspan="6" class="empty-state">Loading transactions…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="link-row">
+      <a href="index.html">← Back to Payment Page</a>
+    </div>
+
+    <div class="footer-note">🔒 Secured by TranzUPI · This is a test gateway environment</div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

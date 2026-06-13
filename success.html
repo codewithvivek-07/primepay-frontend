@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Payment Successful - PrimePay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <div class="logo-section">
+      <div class="logo-icon">₹</div>
+      <div class="logo-title">PrimePay</div>
+      <div class="logo-subtitle">Test Gateway · Secure UPI Payments</div>
+    </div>
+
+    <div class="glass-card" id="resultCard">
+
+      <div class="result-icon success">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <div class="result-title success">Payment Successful</div>
+      <div class="result-subtitle">Your transaction has been completed successfully.</div>
+
+      <div class="detail-row">
+        <span class="detail-label">Amount Paid</span>
+        <span class="detail-value amount-highlight" id="amountValue">₹0.00</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Order ID</span>
+        <span class="detail-value" id="orderIdValue">—</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">UTR Number</span>
+        <span class="detail-value" id="utrValue">—</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Transaction Time</span>
+        <span class="detail-value" id="timeValue">—</span>
+      </div>
+
+      <div class="action-row">
+        <button class="btn btn-primary" id="downloadReceiptBtn">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Receipt
+        </button>
+      </div>
+      <div class="action-row">
+        <a href="index.html" class="btn btn-secondary" style="text-decoration:none;">Make Another Payment</a>
+      </div>
+    </div>
+
+    <div class="footer-note">🔒 Secured by TranzUPI · This is a test gateway environment</div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/success.js"></script>
+</body>
+</html>
